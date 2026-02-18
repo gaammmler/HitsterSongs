@@ -1,34 +1,18 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <title>Hitster Song</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Hitster Song</title>
 </head>
-<body>
+<body style="text-align:center; font-family:sans-serif">
 
-<h1>🎵 Song startet gleich…</h1>
-<h2 id="countdown">3</h2>
+    <h1>🎵 Hitster</h1>
+    <p>Song läuft</p>
 
-<audio id="audio" src="source/Rick Never Gonna Give You Up.mp3"></audio>
-
-<script>
-  let c = 3;
-  const countdown = document.getElementById("countdown");
-  const audio = document.getElementById("audio");
-
-  const timer = setInterval(() => {
-    c--;
-    countdown.textContent = c;
-
-    if (c === 0) {
-      clearInterval(timer);
-      countdown.textContent = "🎶";
-      audio.play();
-    }
-  }, 1000);
-</script>
+    <audio controls autoplay>
+        <source src="source/Rick Never Gonna Give You Up.mp3" type="audio/mpeg">
+        Dein Browser unterstützt Audio nicht.
+    </audio>
 
 </body>
 </html>
-
